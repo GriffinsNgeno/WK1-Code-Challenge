@@ -1,6 +1,16 @@
+// The onclick function 
+
+
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+const prompt = require('prompt-sync')();
+const gross = prompt('Enter your gross salary ')
+
 // function to calculate tax rate based on gross salary
-function taxRate(gross){
-    let gross = prompt('Enter Gross Salary ')
+const taxRate = (gross) => {
     if (gross <= 24000) {
         return 10/100
     }
@@ -13,7 +23,7 @@ function taxRate(gross){
 }
 
 // function to calculate NHIF deduction
-function nhifDeduction(gross){
+const nhifDeduction = (gross) => {
     if (gross <= 5999) {
         return 150
     }
@@ -71,14 +81,12 @@ function nhifDeduction(gross){
 const nssfDeduction = 400
 
 // function to calculate net salary
-function salary(gross){
-    console.log(gross - (gross * taxRate(gross)) - nssfDeduction - nhifDeduction(gross));
+const salary = (gross) => {
+    console.log(gross - (gross*taxRate(gross)) - nssfDeduction - nhifDeduction(gross))
 }
 
-
-console.log(salary(gross));
-// // get user input
-// readline.question('Please enter your gross salary: ', gross => {
-//     salary(gross)
-//     readline.close()
-// })
+// get user input
+readline.question('Please enter your gross salary: ', gross => {
+    salary(gross)
+    readline.close()
+})
