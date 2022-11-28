@@ -11,7 +11,7 @@
       }else if (grade < 40){
         console.log('Grade E');
       } else{
-        console.log('Invalid!');
+        console.log('Invalid! ');
       }
     }
     grade()
