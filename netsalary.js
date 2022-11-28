@@ -1,13 +1,6 @@
-// The onclick function 
-// calculating the speed limit af a car 
-
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
-
 // function to calculate tax rate based on gross salary
-const taxRate = (gross) => {
+function taxRate(gross){
+    let gross = prompt('Enter Gross Salary ')
     if (gross <= 24000) {
         return 10/100
     }
@@ -20,7 +13,7 @@ const taxRate = (gross) => {
 }
 
 // function to calculate NHIF deduction
-const nhifDeduction = (gross) => {
+function nhifDeduction(gross){
     if (gross <= 5999) {
         return 150
     }
@@ -78,12 +71,14 @@ const nhifDeduction = (gross) => {
 const nssfDeduction = 400
 
 // function to calculate net salary
-const salary = (gross) => {
-    console.log(gross - (gross*taxRate(gross)) - nssfDeduction - nhifDeduction(gross))
+function salary(gross){
+    console.log(gross - (gross * taxRate(gross)) - nssfDeduction - nhifDeduction(gross));
 }
 
-// get user input
-readline.question('Please enter your gross salary: ', gross => {
-    salary(gross)
-    readline.close()
-})
+
+console.log(salary(gross));
+// // get user input
+// readline.question('Please enter your gross salary: ', gross => {
+//     salary(gross)
+//     readline.close()
+// })
