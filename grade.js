@@ -1,3 +1,4 @@
+    // Function to Generate grade
     function grade() {
       const grade = prompt("Enter Marks")
       if (grade >= 79 && grade <= 100) {
