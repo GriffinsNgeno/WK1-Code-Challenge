@@ -1,4 +1,4 @@
-    //  
+    //  Function to calculate speed
     function speed(){
         const speed = prompt ("Enter Car Speed")
         if (speed <= 70){
