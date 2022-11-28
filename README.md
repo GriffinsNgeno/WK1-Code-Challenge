@@ -48,7 +48,7 @@ A that takes as input the speed of a car e.g 80. If the speed is less than 70, i
 Griffins Ngeno
 
 
- ## PROJECT TWO NAME
+ ## PROJECT THREE NAME
 Speed detector
 
 ## Description
