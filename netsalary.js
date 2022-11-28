@@ -7,7 +7,7 @@ const readline = require('readline').createInterface({
 })
 
 const prompt = require('prompt-sync')();
-const gross = prompt('Enter your gross salary ')
+
 
 // function to calculate tax rate based on gross salary
 const taxRate = (gross) => {
@@ -86,7 +86,7 @@ const salary = (gross) => {
 }
 
 // get user input
-readline.question('Please enter your gross salary: ', gross => {
+    readline.question('Please enter your gross salary: ', gross => {
     salary(gross)
     readline.close()
 })

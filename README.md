@@ -1,6 +1,7 @@
 # WK1-Code-Challenge
 # Install requirements
 npm install
+Run npm install prompt-sync in the terminal
 
 # grade-generator
 To run, run this command in terminal:
