@@ -1,6 +1,8 @@
     //  Function to calculate speed
+    const prompt = require('prompt-sync')();
+
     function speed(){
-        const speed = prompt ("Enter Car Speed")
+        const speed = prompt ("Enter Car Speed: ")
         if (speed <= 70){
             console.log ('Ok')
         } else if (speed - 70){

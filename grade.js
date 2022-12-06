@@ -1,6 +1,8 @@
     // Function to Generate grade
+    const prompt = require('prompt-sync')();
+
     function grade() {
-      const grade = prompt("Enter Marks")
+      const grade = prompt("Enter Marks: ")
       if (grade >= 79 && grade <= 100) {
         console.log('Grade A');
       } else if (grade >= 60 && grade <= 78){
